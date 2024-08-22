@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 12:01:13 by marvin            #+#    #+#             */
-/*   Updated: 2024/03/06 21:59:06 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/01/22 21:59:55 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,8 @@ void	init_philo(t_philo *philos, int id, t_discussion *program,
 	philos->sated = 0;
 	if (philos->databank->num_of_phils > 1)
 	{
-		philos->right_f = &forks[(id + 1) % program->philos[0].databank->num_of_phils];
+		philos->right_f = &forks[(id + 1)
+			% program->philos[0].databank->num_of_phils];
 	}
 	philos->left_f = &forks[id];
 	philos->confirmed_death = &program->death_flag;

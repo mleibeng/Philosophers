@@ -6,11 +6,12 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 20:08:53 by mleibeng          #+#    #+#             */
-/*   Updated: 2024/01/27 03:47:27 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:05:42 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers_bonus.h"
+#include <stdint.h>
 
 size_t	ms_timer(struct timeval time)
 {
@@ -36,7 +37,7 @@ size_t	timer_start(void)
 	t_timer	measure_timer;
 
 	if (gettimeofday(&(measure_timer.timer), NULL) == -1)
-		return (printf("getttimeofday error", NULL));
+		return (printf("getttimeofday error"));
 	return (ms_timer(measure_timer.timer));
 }
 

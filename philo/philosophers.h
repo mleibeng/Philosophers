@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:43:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/02/29 14:58:15 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/01/23 00:13:36 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <stdlib.h>
 # include <sys/time.h>
 # include <unistd.h>
-# include <stdint.h>
 
 # define MAX_PHILO 200
 
@@ -72,7 +71,8 @@ size_t				timer_start(void);
 void				improved_sleep(size_t time_delay);
 void				init_philo(t_philo *philos, int id, t_discussion *program,
 						pthread_mutex_t *forks);
-void				print_function(t_philo *philo, char *string);
+void				print_function(t_philo *philo, char *string,
+						size_t current_ms);
 int					check_death_flag(t_philo *philo);
 void				*guard_routine(void *all_philos);
 void				cleanup_func(t_discussion *program, t_databank *data,

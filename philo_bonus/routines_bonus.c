@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 18:27:25 by mleibeng          #+#    #+#             */
-/*   Updated: 2024/01/28 16:44:01 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/22 17:39:42 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,6 @@ void	eating_routine(t_philo *philos, sem_t *forks)
 void	philo_routine(t_philo *philos, sem_t *forks)
 {
 	pthread_t	check_condition;
-	int			i;
-
-	i = -1;
 	pthread_create(&check_condition, NULL, check_death_flag, philos);
 	pthread_detach(check_condition);
 	while (1)

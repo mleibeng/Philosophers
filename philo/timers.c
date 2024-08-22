@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 20:08:53 by mleibeng          #+#    #+#             */
-/*   Updated: 2024/02/29 14:57:10 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/15 23:03:15 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	timer_start(void)
 	t_timer	measure_timer;
 
 	if (gettimeofday(&(measure_timer.timer), NULL) == -1)
-		printf("getttimeofday error");
+		return (printf("getttimeofday error", NULL));
 	return (ms_timer(measure_timer.timer));
 }
 
@@ -82,11 +82,15 @@ size_t	timer_start(void)
 // 	}
 // }
 
-void	improved_sleep(size_t time_delay)
+void	improved_sleep(size_t time_delay, t_philo *philo)
 {
 	t_timer	current_time;
 
 	current_time.start_time = timer_start();
 	while (timer_start() - current_time.start_time < time_delay)
+	{
 		usleep(100);
+		if (philo->confirmed_death)
+			break;
+	}
 }

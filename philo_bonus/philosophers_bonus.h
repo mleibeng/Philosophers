@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:43:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/28 15:15:32 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/15 20:08:42 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # include <sys/types.h>
 # include <sys/wait.h>
 # include <unistd.h>
+# include <fcntl.h>
 
 # define MAX_PHILO 200
 

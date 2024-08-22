@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 00:00:56 by mleibeng          #+#    #+#             */
-/*   Updated: 2024/03/06 01:35:35 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/01/22 20:47:36 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ int	check_starvation(t_philo *watchguard)
 			- individual->timestamp_last_meal
 			>= watchguard->databank->deathdelay)
 		{
-			print_function(individual, "has died\n");
+			print_function(individual, "has died\n",
+				individual->timestamp_last_meal);
 			*(watchguard->confirmed_death) = 1;
 			return (pthread_mutex_unlock(individual->lock_eating), 1);
 		}

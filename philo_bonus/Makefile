@@ -1,6 +1,6 @@
 NAME		:= philo_bonus
 CC			:= cc
-CFLAGS		:= -Wextra -Wall -Werror -pthread -O3
+CFLAGS		:= -Wextra -Wall -Werror -g -pthread
 
 SRCS		:= main_bonus.c init_bonus.c error_checks_bonus.c death_checks_bonus.c routines_bonus.c timers_bonus.c utils_bonus.c utils2_bonus.c
 OBJS		:= ${SRCS:.c=.o}
