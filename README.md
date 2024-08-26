@@ -4,6 +4,8 @@ Multithreading project for solving the introductory Philosophers problem with le
 
 Mandatory Part is built using a threaded program while the Bonus part uses forked processes to argue as Philosophers, managing communication only through Semaphores.
 
+![DALL·E-2024-08-26-12 02](https://github.com/user-attachments/assets/d9ba0854-3b74-4d3e-9259-a881cc3fe14b)
+
 ### Implementation Details
 
 1. **Philosopher Structure**: Each philosopher is represented by a struct containing their ID, eating status, time of last meal, and number of times eaten.
@@ -17,6 +19,7 @@ Mandatory Part is built using a threaded program while the Bonus part uses forke
 5. **Termination Conditions**: The simulation ends when either a philosopher dies of starvation or all philosophers have eaten a specified number of times.
 
 ---
+
 
 ### Multithreading
 
