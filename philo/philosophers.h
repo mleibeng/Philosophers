@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:43:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/08/26 11:46:19 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/26 11:56:20 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <sys/time.h>
 # include <unistd.h>
+# include <stdint.h>
 
 # define MAX_PHILO 200
 

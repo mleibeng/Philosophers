@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 20:08:53 by mleibeng          #+#    #+#             */
-/*   Updated: 2024/08/26 11:51:45 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/26 11:56:41 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	timer_start(void)
 	t_timer	measure_timer;
 
 	if (gettimeofday(&(measure_timer.timer), NULL) == -1)
-		return (printf("getttimeofday error", NULL));
+		return (printf("getttimeofday error"));
 	return (ms_timer(measure_timer.timer));
 }
 

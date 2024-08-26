@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 04:03:19 by mleibeng          #+#    #+#             */
-/*   Updated: 2024/01/22 03:55:15 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/26 11:57:07 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	print_function(t_philo *philo, char *string, size_t current_ms)
 {
-	current_ms = 0;
+	(void)current_ms;
 	pthread_mutex_lock(philo->lock_messaging);
 	printf("%zu %d %s", timer_start() - philo->databank->init_time,
 		philo->tid, string);
