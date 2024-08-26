@@ -4,7 +4,7 @@ Multithreading project for solving the introductory Philosophers problem with le
 
 Mandatory Part is built using a threaded program while the Bonus part uses forked processes to argue as Philosophers, managing communication only through Semaphores.
 
-<img src="![DALL·E-2024-08-26-12 02](https://github.com/user-attachments/assets/d9ba0854-3b74-4d3e-9259-a881cc3fe14b)" width="300" height="300"/>
+![DALL·E-2024-08-26-12 02](https://github.com/user-attachments/assets/d9ba0854-3b74-4d3e-9259-a881cc3fe14b)"
 
 ### Implementation Details
 
