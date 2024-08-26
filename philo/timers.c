@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 20:08:53 by mleibeng          #+#    #+#             */
-/*   Updated: 2024/08/15 23:03:15 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/26 11:51:45 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	improved_sleep(size_t time_delay, t_philo *philo)
 	while (timer_start() - current_time.start_time < time_delay)
 	{
 		usleep(100);
-		if (philo->confirmed_death)
-			break;
+		if (*(philo->confirmed_death))
+			return ;
 	}
 }

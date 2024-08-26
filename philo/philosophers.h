@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:43:37 by marvin            #+#    #+#             */
-/*   Updated: 2024/01/23 00:13:36 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/26 11:46:19 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int					check_args(int argc, char **argv);
 void				*philo_routine(void *philos);
 size_t				ms_timer(struct timeval time);
 size_t				timer_start(void);
-void				improved_sleep(size_t time_delay);
+void				improved_sleep(size_t time_delay, t_philo *philosopher);
 void				init_philo(t_philo *philos, int id, t_discussion *program,
 						pthread_mutex_t *forks);
 void				print_function(t_philo *philo, char *string,

@@ -6,7 +6,7 @@
 /*   By: mleibeng <mleibeng@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 18:27:25 by mleibeng          #+#    #+#             */
-/*   Updated: 2024/01/23 00:19:54 by mleibeng         ###   ########.fr       */
+/*   Updated: 2024/08/26 11:46:54 by mleibeng         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	rest_routine(t_philo *philo, size_t current_time)
 {
 	if (!*(philo->confirmed_death))
 		print_function(philo, "is sleeping\n", current_time);
-	improved_sleep(philo->databank->sleepdelay);
+	improved_sleep(philo->databank->sleepdelay, philo);
 	if (check_death_flag(philo))
 		return ;
 	if (!*(philo->confirmed_death))
@@ -37,7 +37,7 @@ void	eating_routine(t_philo *philo, size_t current_time)
 	philo->timestamp_last_meal = timer_start();
 	philo->food_consumed += 1;
 	pthread_mutex_unlock(philo->lock_eating);
-	improved_sleep(philo->databank->eatdelay);
+	improved_sleep(philo->databank->eatdelay, philo);
 	pthread_mutex_lock(philo->lock_eating);
 	if (philo->food_consumed >= philo->databank->max_meals && !philo->sated)
 	{
@@ -56,7 +56,7 @@ void	lonely_philo(t_philo *philo)
 		pthread_mutex_lock(philo->left_f);
 		if (!*(philo->confirmed_death))
 			print_function(philo, "has taken a fork\n", timer_start());
-		improved_sleep(philo->databank->deathdelay + 100);
+		improved_sleep(philo->databank->deathdelay, philo);
 		pthread_mutex_unlock(philo->left_f);
 	}
 }
@@ -103,9 +103,7 @@ void	*guard_routine(void *all_philos)
 		}
 		pthread_mutex_unlock(watchguard->lock_eating);
 		if (check_starvation(watchguard))
-		{
 			break ;
-		}
 	}
 	return (NULL);
 }
